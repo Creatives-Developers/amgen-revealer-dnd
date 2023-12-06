@@ -20,7 +20,6 @@ $white-color: #fff;
 body {
   position: relative;
   @include reset;
-  background: $primary-color;
   font-family: Arial, Helvetica, sans-serif;
 }
 
