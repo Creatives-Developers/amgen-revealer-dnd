@@ -1,11 +1,20 @@
 .cloud {
-  width: 50%;
   position: absolute;
-  &.dragging {
-    visibility: hidden;
+  z-index: 2;
+  // transition: all 0.002s ease-in-out;
+  .cloud-img {
+    width: 100%;
+    &.dragging {
+      opacity: 0.5;
+    }
   }
 
-  img {
-    width: 100%;
+  .drag-layer-container {
+    position: fixed;
+    z-index: 10;
+
+    img {
+      user-select: none;
+    }
   }
 }

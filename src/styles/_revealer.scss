@@ -1,7 +1,12 @@
 .revealer-container {
   position: relative;
+  overflow: hidden;
+  height: 100dvh;
+  // max-width: 1500px;
+  margin-inline: auto;
   > img {
     width: 100%;
+
     z-index: -1;
     &:not(.hidden) {
       position: absolute;
