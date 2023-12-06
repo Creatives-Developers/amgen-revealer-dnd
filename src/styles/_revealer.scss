@@ -1,0 +1,14 @@
+.revealer-container {
+  position: relative;
+  > img {
+    width: 100%;
+    z-index: -1;
+    &:not(.hidden) {
+      position: absolute;
+      inset: 0;
+    }
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+}

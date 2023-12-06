@@ -1,0 +1,11 @@
+.cloud {
+  width: 50%;
+  position: absolute;
+  &.dragging {
+    visibility: hidden;
+  }
+
+  img {
+    width: 100%;
+  }
+}
