@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
+
+// Colors
+$primary-color: #602263;
+$primary-light-color: #3f113d88;
+$light-bg: white;
+$black-color: #000;
+$input-border-color: #00000088;
+$white-color: #fff;
+
+$footer-height: 170px;
+
+body {
+  position: relative;
+  @include reset;
+  background: $primary-color;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// Media
+// Small phones
+$screen-tn-max: 450px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 596px;
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Phone devices
+@mixin tn {
+  @media (max-width: #{$screen-tn-max}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin centerChilds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fillHeight {
+  min-height: calc(100dvh - $nav-height);
+}
+
+// Scroll bar
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  transition: 0.5s;
+  background: $primary-light-color;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color;
+}
+
+:root {
+  font-size: 18px;
+  scroll-behavior: smooth;
+
+  @include lg {
+    font-size: 18px;
+  }
+  @include md {
+    font-size: 16px;
+  }
+  @include sm {
+    font-size: 14px;
+  }
+  // @include tn{
+  //     font-size: 10px;
+  // }
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.no-data {
+  @include centerChilds;
+  flex-direction: column;
+  img {
+    width: 100%;
+    max-width: 500px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+#root {
+  min-height: 100dvh;
+  padding-bottom: $footer-height;
+}
+
+@mixin btnStyle {
+  background: white;
+  color: $primary-color;
+  border: 1px solid transparent;
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  &:hover {
+    border-color: white;
+    color: white;
+    background: transparent;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.apploval-code {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  // width: 50px;
+  text-align: center;
+  @include centerChilds;
+  z-index: -1;
+  span {
+    color: $white-color;
+    position: relative;
+    left: 50px;
+    display: block;
+    width: 100%;
+    transform: rotate(90deg);
+  }
+}

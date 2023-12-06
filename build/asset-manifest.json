@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.34e506ec.css",
+    "main.js": "/static/js/main.35db074c.js",
+    "static/js/787.c1112931.chunk.js": "/static/js/787.c1112931.chunk.js",
+    "static/media/botox-bottel.png": "/static/media/botox-bottel.8a11c223a3d991e781cf.png",
+    "static/media/hint-image.jpg": "/static/media/hint-image.d50aa9a3cfede964295f.jpg",
+    "static/media/1_before.png": "/static/media/1_before.7e46a4260c8104cc1f33.png",
+    "static/media/1_after.png": "/static/media/1_after.6e0f01531dbadb768947.png",
+    "static/media/4_before.png": "/static/media/4_before.15ef329bb076577c12d3.png",
+    "static/media/3_before.png": "/static/media/3_before.c9e298f6baba899544bb.png",
+    "static/media/4_after.png": "/static/media/4_after.5f4a4ce836736805301d.png",
+    "static/media/3_after.png": "/static/media/3_after.a47fd7dd6cdd08e9f11a.png",
+    "static/media/2_before.png": "/static/media/2_before.7c8a7dd41ea12833823c.png",
+    "static/media/2_after.png": "/static/media/2_after.b4331ef25e0b5abccc66.png",
+    "static/media/3-completesMe.png": "/static/media/3-completesMe.b68cec55f573e40beaea.png",
+    "static/media/success.mp3": "/static/media/success.fd2c2fea27379cbc44da.mp3",
+    "static/media/wrong.mp3": "/static/media/wrong.00446cc4b273d82f8da2.mp3",
+    "static/media/logo.png": "/static/media/logo.a0b1af21b0be08357557.png",
+    "index.html": "/index.html",
+    "main.34e506ec.css.map": "/static/css/main.34e506ec.css.map",
+    "main.35db074c.js.map": "/static/js/main.35db074c.js.map",
+    "787.c1112931.chunk.js.map": "/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34e506ec.css",
+    "static/js/main.35db074c.js"
+  ]
+}
