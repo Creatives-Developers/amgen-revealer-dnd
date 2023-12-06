@@ -1,11 +1,11 @@
-.cloud {
+.cloud-item {
   position: absolute;
   z-index: 2;
-  // transition: all 0.002s ease-in-out;
+
   .cloud-img {
     width: 100%;
     &.dragging {
-      opacity: 0.5;
+      opacity: 1;
     }
   }
 
@@ -15,6 +15,7 @@
 
     img {
       user-select: none;
+      opacity: 0.5;
     }
   }
 }

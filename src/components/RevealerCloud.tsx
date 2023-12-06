@@ -24,10 +24,9 @@ export default function RevealerCloud({
     preview(getEmptyImage(), { captureDraggingState: true });
   }, [preview]);
   return (
-    <section className={`cloud`} style={{ top, left, width }}>
+    <section ref={drag} className={`cloud-item`} style={{ top, left, width }}>
       <img
         className={`cloud-img  ${isDragging ? "dragging" : ""}`}
-        ref={drag}
         src={require(`../assets/images/${imageName}`)}
       />
       <CloudDragLayer

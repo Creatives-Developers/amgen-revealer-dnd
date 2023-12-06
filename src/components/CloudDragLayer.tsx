@@ -22,23 +22,14 @@ export default function CloudDragLayer({
     })
   );
 
+  const style = {
+    left: dragableItemPosition.x - (elementRef.current?.clientWidth || 0) / 2,
+    top: dragableItemPosition.y - (elementRef.current?.clientHeight || 0) / 2,
+    opacity: dragableItemPosition.x + dragableItemPosition.y === 0 ? 0 : 1,
+  };
+  // console.log(style, dragableItemPosition);
   return (
-    <section
-      ref={elementRef}
-      className="drag-layer-container"
-      style={
-        isDragging && isImageDragging
-          ? {
-              left:
-                dragableItemPosition.x - elementRef.current!.clientWidth / 2,
-              top:
-                dragableItemPosition.y - elementRef.current!.clientHeight / 2,
-              opacity:
-                dragableItemPosition.x + dragableItemPosition.y === 0 ? 0 : 1,
-            }
-          : { visibility: "hidden" }
-      }
-    >
+    <section ref={elementRef} className="drag-layer-container" style={style}>
       {isDragging && isImageDragging && (
         <img style={{ width }} src={require(`../assets/images/${imageName}`)} />
       )}

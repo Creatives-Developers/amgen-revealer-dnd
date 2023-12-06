@@ -17,8 +17,6 @@ $black-color: #000;
 $input-border-color: #00000088;
 $white-color: #fff;
 
-$footer-height: 170px;
-
 body {
   position: relative;
   @include reset;
@@ -141,7 +139,6 @@ $screen-lg-max: 992px;
 
 #root {
   min-height: 100dvh;
-  padding-bottom: $footer-height;
 }
 
 @mixin btnStyle {
@@ -157,35 +154,5 @@ $screen-lg-max: 992px;
     border-color: white;
     color: white;
     background: transparent;
-  }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.apploval-code {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  // width: 50px;
-  text-align: center;
-  @include centerChilds;
-  z-index: -1;
-  span {
-    color: $white-color;
-    position: relative;
-    left: 50px;
-    display: block;
-    width: 100%;
-    transform: rotate(90deg);
   }
 }
