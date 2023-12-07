@@ -1,19 +1,25 @@
-.revealer-container {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  margin-inline: auto;
 
-  > img {
-    width: 100%;
-    transition: all 0.5s ease-in-out;
-    &:not(.hidden) {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-    }
-    &.hidden {
-      visibility: hidden;
+.home-container{
+
+  .revealer-container {
+    position: relative;
+    overflow: hidden;
+    max-height:100dvh ;
+    height: 100%;
+    margin-inline: auto;
+  
+    > img {
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+      &:not(.hidden) {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+      }
+      &.hidden {
+        visibility: hidden;
+      }
     }
   }
 }
+

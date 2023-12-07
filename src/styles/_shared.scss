@@ -10,8 +10,8 @@
 }
 
 // Colors
-$primary-color: #602263;
-$primary-light-color: #3f113d88;
+$primary-color: #006aa3;
+$primary-light-color: #006aa3;
 $light-bg: white;
 $black-color: #000;
 $input-border-color: #00000088;
@@ -23,12 +23,11 @@ $white-color: #fff;
   align-items: center;
 }
 
-
 body {
   position: relative;
   @include reset;
   font-family: Arial, Helvetica, sans-serif;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 // Media
@@ -40,6 +39,9 @@ $screen-sm-max: 596px;
 $screen-md-max: 768px;
 // Tablets and small desktops
 $screen-lg-max: 992px;
+
+// Tablets and small desktops
+$screen-xlg-max: 1200px;
 
 // Phone devices
 @mixin tn {
@@ -69,7 +71,11 @@ $screen-lg-max: 992px;
   }
 }
 
-
+@mixin xlg {
+  @media (max-width: #{$screen-xlg-max}) {
+    @content;
+  }
+}
 
 @mixin fillHeight {
   min-height: calc(100dvh - $nav-height);
@@ -140,10 +146,6 @@ $screen-lg-max: 992px;
   }
 }
 
-#root {
-  // min-height: 100dvh;
-}
-
 @mixin btnStyle {
   background: white;
   color: $primary-color;
@@ -158,4 +160,15 @@ $screen-lg-max: 992px;
     color: white;
     background: transparent;
   }
+}
+
+footer,header{
+  transition: all 0.5s ease-in-out;
+  @media (width >= #{$screen-xlg-max}) {
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
 }

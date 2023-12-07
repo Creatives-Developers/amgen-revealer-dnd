@@ -1,0 +1,20 @@
+header {
+  position: fixed;
+  padding-block: 20px;
+  z-index: 1000;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: white;
+@include centerChilds;
+  .header-image {
+    width: 100%;
+    max-width: 1000px;
+   
+  }
+  @include xlg {
+    margin-block: 25px;
+    padding: 20px min(50px, 5%);
+    position: relative;
+  }
+}

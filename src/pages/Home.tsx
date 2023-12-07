@@ -3,6 +3,7 @@ import { CloudType, clouds } from "../utils/constants";
 import RevealerCloud from "../components/RevealerCloud";
 import { DropTargetMonitor, useDrop } from "react-dnd";
 import { DragableItemPosition, DraggableItem } from "../utils/types";
+import CloudDragLayer from "../components/CloudDragLayer";
 const CLOUD_COUNT = clouds.length;
 
 export default function Home() {
@@ -18,12 +19,14 @@ export default function Home() {
     drop: (item: DraggableItem, monitor: DropTargetMonitor<DraggableItem>) => {
       const initialSource = monitor.getInitialSourceClientOffset();
       const differanceOffset = monitor.getDifferenceFromInitialOffset();
-      const { width, height } =
+      const { width, height,x,y } =
         dropParentElemet.current!.getBoundingClientRect();
-
+       
       let cloud = clouds.find((c) => c.key === item.key);
-
+      
       if (cloud && initialSource && differanceOffset) {
+        initialSource.y-=y
+        initialSource.x-=x
         const topVal = ((initialSource.y + differanceOffset.y) / height) * 100;
         const leftVal = ((initialSource.x + differanceOffset.x) / width) * 100;
         cloud.top = topVal + "%";
@@ -74,7 +77,9 @@ console.log({isOutFromTop,isOutFromBottom,isOutFromLeft,isOutFromRight})
           y: touch.clientY,
         }));
       }}
+      className="home-container"
     >
+        
       <section ref={drop} className="revealer-container">
         <img
           src={require(`../assets/images/step ${imageStep()}/base.jpg`)}
