@@ -28,16 +28,15 @@ export default function Home() {
         const leftVal = ((initialSource.x + differanceOffset.x) / width) * 100;
         cloud.top = topVal + "%";
         cloud.left = leftVal + "%";
-        const isOut =
-          topVal <= -1 ||
-          topVal +
-            ((0.5 * getValue(cloud.width, parentSize.width)) /
-              parentSize.height) *
-              100 >
-            100 ||
-          leftVal < 0 ||
-          leftVal + getPercentage(cloud.width, parentSize.width) > 100;
-        if (isOut) clouds.splice(clouds.indexOf(cloud), 1);
+        const isOutFromTop =  (initialSource.y + differanceOffset.y) <= (height/100);
+        const isOutFromBottom = (initialSource.y + differanceOffset.y) + (125) >= height;
+        const isOutFromLeft =  leftVal < 0;
+        const isOutFromRight =   leftVal + getPercentage(cloud.width, parentSize.width) > 100;
+console.log({isOutFromTop,isOutFromBottom,isOutFromLeft,isOutFromRight})
+        if (isOutFromTop ||
+          isOutFromBottom ||
+          isOutFromLeft ||
+          isOutFromRight) clouds.splice(clouds.indexOf(cloud), 1);
       }
     },
   });
@@ -56,8 +55,8 @@ export default function Home() {
   const imageStep = () => {
     const sector = parseInt(CLOUD_COUNT / 3 + "");
     if (sector * 2 < clouds.length) return 1;
-    else if (sector < clouds.length) return 2;
-    return 3;
+    else if (! clouds.length) return 3;
+    return 2;
   };
   return (
     <article

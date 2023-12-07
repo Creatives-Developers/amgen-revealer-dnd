@@ -50,20 +50,7 @@ export const clouds: Cloud[] = [
     width: "25%",
     imageName: "c1-f.png",
   },
-  // {
-  //   key: "8",
-  //   top: "-5%",
-  //   left: "-29%",
-  //   width: "50%",
-  //   imageName: "c2-f.png",
-  // },
-  // {
-  //   key: "9",
-  //   top: "1%",
-  //   left: "1%",
-  //   width: "50%",
-  //   imageName: "c1-f.png",
-  // },
+
 ];
 
 export const CloudType = "CloudType";

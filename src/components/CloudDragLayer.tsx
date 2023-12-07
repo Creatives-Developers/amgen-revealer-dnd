@@ -27,7 +27,6 @@ export default function CloudDragLayer({
     top: dragableItemPosition.y - (elementRef.current?.clientHeight || 0) / 2,
     opacity: dragableItemPosition.x + dragableItemPosition.y === 0 ? 0 : 1,
   };
-  // console.log(style, dragableItemPosition);
   return (
     <section ref={elementRef} className="drag-layer-container" style={style}>
       {isDragging && isImageDragging && (

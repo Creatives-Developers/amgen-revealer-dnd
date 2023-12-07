@@ -17,10 +17,18 @@ $black-color: #000;
 $input-border-color: #00000088;
 $white-color: #fff;
 
+@mixin centerChilds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 body {
   position: relative;
   @include reset;
   font-family: Arial, Helvetica, sans-serif;
+  height: 100dvh;
 }
 
 // Media
@@ -61,11 +69,7 @@ $screen-lg-max: 992px;
   }
 }
 
-@mixin centerChilds {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 @mixin fillHeight {
   min-height: calc(100dvh - $nav-height);
@@ -137,7 +141,7 @@ $screen-lg-max: 992px;
 }
 
 #root {
-  min-height: 100dvh;
+  // min-height: 100dvh;
 }
 
 @mixin btnStyle {
