@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/amgen-revealer-dnd/static/css/main.31695af7.css",
-    "main.js": "/amgen-revealer-dnd/static/js/main.3672055d.js",
+    "main.css": "/amgen-revealer-dnd/static/css/main.8d64e4f3.css",
+    "main.js": "/amgen-revealer-dnd/static/js/main.19ffb4e9.js",
     "static/js/787.c1112931.chunk.js": "/amgen-revealer-dnd/static/js/787.c1112931.chunk.js",
     "static/media/base.jpg": "/amgen-revealer-dnd/static/media/base.299cda6562b6e56d06fa.jpg",
-    "static/media/c1-f.png": "/amgen-revealer-dnd/static/media/c1-f.e1f6bf5dcd7d3250060d.png",
-    "static/media/c2.png": "/amgen-revealer-dnd/static/media/c2.42c04ea0fb289f1519cb.png",
-    "static/media/c2-f.png": "/amgen-revealer-dnd/static/media/c2-f.50d2bc6df68bdfc75537.png",
-    "static/media/c1.png": "/amgen-revealer-dnd/static/media/c1.0879b110514e1a206f9e.png",
-    "static/media/header.png": "/amgen-revealer-dnd/static/media/header.0bad74c9d00b166b5280.png",
+    "static/media/c1-f.png": "/amgen-revealer-dnd/static/media/c1-f.4625c5caef14045e5031.png",
     "static/media/Poppins-Light.ttf": "/amgen-revealer-dnd/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/c2.png": "/amgen-revealer-dnd/static/media/c2.645e3ce36a8a7dc111a1.png",
+    "static/media/c2-f.png": "/amgen-revealer-dnd/static/media/c2-f.ea691894c6919f0046ab.png",
     "static/media/amgenlogo.jpg": "/amgen-revealer-dnd/static/media/amgenlogo.448e6c613c0f0fe82d8a.jpg",
-    "static/media/younite Logo.png": "/amgen-revealer-dnd/static/media/younite Logo.96e5444810617b643342.png",
+    "static/media/c1.png": "/amgen-revealer-dnd/static/media/c1.5a5cd72151fa751976c5.png",
+    "static/media/header.png": "/amgen-revealer-dnd/static/media/header.35e792f33a793c7beb06.png",
+    "static/media/younite Logo.png": "/amgen-revealer-dnd/static/media/younite Logo.e1da8e016c0f43b482d4.png",
     "index.html": "/amgen-revealer-dnd/index.html",
-    "main.31695af7.css.map": "/amgen-revealer-dnd/static/css/main.31695af7.css.map",
-    "main.3672055d.js.map": "/amgen-revealer-dnd/static/js/main.3672055d.js.map",
+    "main.8d64e4f3.css.map": "/amgen-revealer-dnd/static/css/main.8d64e4f3.css.map",
+    "main.19ffb4e9.js.map": "/amgen-revealer-dnd/static/js/main.19ffb4e9.js.map",
     "787.c1112931.chunk.js.map": "/amgen-revealer-dnd/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31695af7.css",
-    "static/js/main.3672055d.js"
+    "static/css/main.8d64e4f3.css",
+    "static/js/main.19ffb4e9.js"
   ]
 }
