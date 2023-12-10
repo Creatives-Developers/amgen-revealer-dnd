@@ -1,0 +1,39 @@
+.result-container{
+    position: fixed;
+    z-index: 999999;
+    inset: 0;
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    padding: 20px ;
+    &.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .index-module_type__E-SaG{
+        text-align: center;
+        padding: 10px;
+        color: $primary-color;
+        font-size: 2rem;
+        font-weight: bold;
+        display: block!important;
+       
+    }
+.content{
+    margin-top: 20px;
+    max-width: 1000px;
+    margin-inline: auto;
+    p{
+        text-align: start;
+        padding: 10px 5px;
+        color: $primary-color;
+        font-size: 1rem;
+    }
+}
+   
+}

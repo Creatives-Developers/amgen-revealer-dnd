@@ -4,10 +4,12 @@ import RevealerCloud from "../components/RevealerCloud";
 import { DropTargetMonitor, useDrop } from "react-dnd";
 import { DragableItemPosition, DraggableItem } from "../utils/types";
 import CloudDragLayer from "../components/CloudDragLayer";
+import Result from "../components/Result";
 const CLOUD_COUNT = clouds.length;
 
 export default function Home() {
   const [cloudsCount,setCloudCount] = useState(clouds.length)
+  const [resultVisability,setResultVisability] = useState(false)
   const [dragableItemPosition, setDragableItemPosition] =
     useState<DragableItemPosition>({
       x: 0,
@@ -56,8 +58,8 @@ export default function Home() {
 
   const imageStep = useMemo(() => {
     const sector = parseInt(CLOUD_COUNT / 3 + "");
-    if (sector * 2 < cloudsCount) return 1;
-    else if (! cloudsCount) return 3;
+    if (cloudsCount==0) return 3;
+    else if (sector * 2 < cloudsCount) return 1;
     return 2;
   },[cloudsCount]);
 
@@ -68,7 +70,15 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-      console.log("cloudsChange",cloudsCount,clouds)
+    let timer:any;
+      if(cloudsCount===0){
+        timer= setTimeout(()=>{
+          setResultVisability(true)
+        },3000)
+      }
+      return ()=>{
+        timer && clearTimeout(timer)
+      }
   }, [cloudsCount]);
 
   return (
@@ -89,7 +99,6 @@ export default function Home() {
       }}
       className="home-container"
     >
-        
       <section ref={drop} className="revealer-container">
         <img
           src={require(`../assets/images/step ${imageStep}/base.jpg`)}
@@ -110,6 +119,8 @@ export default function Home() {
           />
         ))}
       </section>
+
+      <Result resultVisability={resultVisability} />
     </article>
   );
 }
