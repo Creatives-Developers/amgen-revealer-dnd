@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/amgen-revealer-dnd/static/css/main.f906211f.css",
-    "main.js": "/amgen-revealer-dnd/static/js/main.c6016bd5.js",
+    "main.css": "/amgen-revealer-dnd/static/css/main.31695af7.css",
+    "main.js": "/amgen-revealer-dnd/static/js/main.6d75a39f.js",
     "static/js/787.c1112931.chunk.js": "/amgen-revealer-dnd/static/js/787.c1112931.chunk.js",
+    "static/media/base.jpg": "/amgen-revealer-dnd/static/media/base.299cda6562b6e56d06fa.jpg",
     "static/media/c1-f.png": "/amgen-revealer-dnd/static/media/c1-f.e1f6bf5dcd7d3250060d.png",
     "static/media/c2.png": "/amgen-revealer-dnd/static/media/c2.42c04ea0fb289f1519cb.png",
-    "static/media/base.jpg": "/amgen-revealer-dnd/static/media/base.299cda6562b6e56d06fa.jpg",
     "static/media/c2-f.png": "/amgen-revealer-dnd/static/media/c2-f.50d2bc6df68bdfc75537.png",
     "static/media/c1.png": "/amgen-revealer-dnd/static/media/c1.0879b110514e1a206f9e.png",
     "static/media/header.png": "/amgen-revealer-dnd/static/media/header.0bad74c9d00b166b5280.png",
+    "static/media/Poppins-Light.ttf": "/amgen-revealer-dnd/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
     "static/media/amgenlogo.jpg": "/amgen-revealer-dnd/static/media/amgenlogo.448e6c613c0f0fe82d8a.jpg",
+    "static/media/younite Logo.png": "/amgen-revealer-dnd/static/media/younite Logo.96e5444810617b643342.png",
     "index.html": "/amgen-revealer-dnd/index.html",
-    "main.f906211f.css.map": "/amgen-revealer-dnd/static/css/main.f906211f.css.map",
-    "main.c6016bd5.js.map": "/amgen-revealer-dnd/static/js/main.c6016bd5.js.map",
+    "main.31695af7.css.map": "/amgen-revealer-dnd/static/css/main.31695af7.css.map",
+    "main.6d75a39f.js.map": "/amgen-revealer-dnd/static/js/main.6d75a39f.js.map",
     "787.c1112931.chunk.js.map": "/amgen-revealer-dnd/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f906211f.css",
-    "static/js/main.c6016bd5.js"
+    "static/css/main.31695af7.css",
+    "static/js/main.6d75a39f.js"
   ]
 }
