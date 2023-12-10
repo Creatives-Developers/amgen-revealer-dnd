@@ -13,7 +13,7 @@ function App() {
   useEffect(()=>{
     const timer=setTimeout(()=>{
       setHideText(true);
-    },3000)
+    },5000)
     return ()=>{
       clearTimeout(timer)
     }
