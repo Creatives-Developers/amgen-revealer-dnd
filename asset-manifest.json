@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/amgen-revealer-dnd/static/css/main.8d64e4f3.css",
-    "main.js": "/amgen-revealer-dnd/static/js/main.19ffb4e9.js",
+    "main.js": "/amgen-revealer-dnd/static/js/main.dace4729.js",
     "static/js/787.c1112931.chunk.js": "/amgen-revealer-dnd/static/js/787.c1112931.chunk.js",
     "static/media/base.jpg": "/amgen-revealer-dnd/static/media/base.299cda6562b6e56d06fa.jpg",
     "static/media/c1-f.png": "/amgen-revealer-dnd/static/media/c1-f.4625c5caef14045e5031.png",
@@ -14,11 +14,11 @@
     "static/media/younite Logo.png": "/amgen-revealer-dnd/static/media/younite Logo.e1da8e016c0f43b482d4.png",
     "index.html": "/amgen-revealer-dnd/index.html",
     "main.8d64e4f3.css.map": "/amgen-revealer-dnd/static/css/main.8d64e4f3.css.map",
-    "main.19ffb4e9.js.map": "/amgen-revealer-dnd/static/js/main.19ffb4e9.js.map",
+    "main.dace4729.js.map": "/amgen-revealer-dnd/static/js/main.dace4729.js.map",
     "787.c1112931.chunk.js.map": "/amgen-revealer-dnd/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8d64e4f3.css",
-    "static/js/main.19ffb4e9.js"
+    "static/js/main.dace4729.js"
   ]
 }
