@@ -8,12 +8,14 @@ export default function RevealerCloud({
   cloud: { imageName, key, top,mobileTop, left },
   dragableItemPosition,
   width,
-  parentWidth
+  parentWidth,
+  onImageLoad
 }: {
   cloud: Cloud;
   dragableItemPosition: DragableItemPosition;
   width: string;
-  parentWidth:number
+  parentWidth:number,
+  onImageLoad:Function
 }) {
   const [{ isDragging }, drag, preview] = useDrag({
     type: CloudType,
@@ -30,6 +32,7 @@ export default function RevealerCloud({
       <img
         className={`cloud-img  ${isDragging ? "dragging" : ""}`}
         src={require(`../assets/images/${imageName}`)}
+        onLoad={()=>{onImageLoad()}}
       />
       <CloudDragLayer
         imageName={imageName}

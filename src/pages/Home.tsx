@@ -9,6 +9,7 @@ const CLOUD_COUNT = clouds.length;
 
 export default function Home() {
   const [cloudsCount,setCloudCount] = useState(clouds.length)
+  const [loadedImages,setLoadedImages] = useState(0)
   const [resultVisability,setResultVisability] = useState(false)
   const [dragableItemPosition, setDragableItemPosition] =
     useState<DragableItemPosition>({
@@ -103,6 +104,7 @@ export default function Home() {
         <img
           src={require(`../assets/images/step ${imageStep}/base.jpg`)}
           alt={"target visual"}
+          className={`${CLOUD_COUNT!=loadedImages?'hidden':''} bg-image`}
         />
         <img
           src={require("../assets/images/step 1/base.jpg")}
@@ -117,6 +119,7 @@ export default function Home() {
             width={getValue(cloud.width, parentSize.width) + "px"}
             parentWidth={parentSize.width}
             dragableItemPosition={dragableItemPosition}
+            onImageLoad={()=>{setLoadedImages((n)=>n+1)}}
           />
         ))}
       </section>
