@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Poppins';
 }
 
 @mixin reset {
@@ -10,7 +11,7 @@
 }
 
 // Colors
-$primary-color: #006aa3;
+$primary-color: #2060a8;
 $primary-light-color: #006aa3;
 $light-bg: white;
 $black-color: #000;

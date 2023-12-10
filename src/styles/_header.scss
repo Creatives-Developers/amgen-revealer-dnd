@@ -7,10 +7,19 @@ header {
   right: 0;
   background: white;
 @include centerChilds;
-  .header-image {
-    width: 100%;
-    max-width: 1000px;
-   
+flex-direction: column;
+  p{
+    font-size: 2rem;
+    margin-block: 5px;
+    color: $primary-color;
+    text-align: center;
+    &:nth-of-type(2){
+      font-weight: bold;
+    }
+
+    @include md{
+      font-size: 1.3rem;
+    }
   }
   @include xlg {
     margin-block: 25px;
@@ -18,3 +27,4 @@ header {
     position: relative;
   }
 }
+

@@ -7,6 +7,7 @@ import CloudDragLayer from "../components/CloudDragLayer";
 const CLOUD_COUNT = clouds.length;
 
 export default function Home() {
+  const [cloudsCount,setCloudCount] = useState(clouds.length)
   const [dragableItemPosition, setDragableItemPosition] =
     useState<DragableItemPosition>({
       x: 0,
@@ -23,7 +24,6 @@ export default function Home() {
         dropParentElemet.current!.getBoundingClientRect();
        
       let cloud = clouds.find((c) => c.key === item.key);
-      
       if (cloud && initialSource && differanceOffset) {
         initialSource.y-=y
         initialSource.x-=x
@@ -35,18 +35,17 @@ export default function Home() {
         const isOutFromBottom = (initialSource.y + differanceOffset.y) + (125) >= height;
         const isOutFromLeft =  leftVal < 0;
         const isOutFromRight =   leftVal + getPercentage(cloud.width, parentSize.width) > 100;
-console.log({isOutFromTop,isOutFromBottom,isOutFromLeft,isOutFromRight})
         if (isOutFromTop ||
           isOutFromBottom ||
           isOutFromLeft ||
-          isOutFromRight) clouds.splice(clouds.indexOf(cloud), 1);
+          isOutFromRight) {
+            clouds.splice(clouds.indexOf(cloud), 1);
+            setCloudCount(clouds.length)
+          }
       }
     },
   });
-  useEffect(() => {
-    const { width, height } = dropParentElemet.current!.getBoundingClientRect();
-    setParentSize({ width, height });
-  }, []);
+
 
   function getPercentage(percetage: string, total: number): number {
     return Number(percetage.replace("%", ""));
@@ -55,12 +54,23 @@ console.log({isOutFromTop,isOutFromBottom,isOutFromLeft,isOutFromRight})
     return (getPercentage(percetage, total) / 100) * total;
   }
 
-  const imageStep = () => {
+  const imageStep = useMemo(() => {
     const sector = parseInt(CLOUD_COUNT / 3 + "");
-    if (sector * 2 < clouds.length) return 1;
-    else if (! clouds.length) return 3;
+    if (sector * 2 < cloudsCount) return 1;
+    else if (! cloudsCount) return 3;
     return 2;
-  };
+  },[cloudsCount]);
+
+
+  useEffect(() => {
+    const { width, height } = dropParentElemet.current!.getBoundingClientRect();
+    setParentSize({ width, height });
+  }, []);
+
+  useEffect(() => {
+      console.log("cloudsChange",cloudsCount,clouds)
+  }, [cloudsCount]);
+
   return (
     <article
       ref={dropParentElemet}
@@ -82,7 +92,7 @@ console.log({isOutFromTop,isOutFromBottom,isOutFromLeft,isOutFromRight})
         
       <section ref={drop} className="revealer-container">
         <img
-          src={require(`../assets/images/step ${imageStep()}/base.jpg`)}
+          src={require(`../assets/images/step ${imageStep}/base.jpg`)}
           alt={"target visual"}
         />
         <img

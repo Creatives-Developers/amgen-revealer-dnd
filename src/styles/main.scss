@@ -2,6 +2,15 @@
 // @import "primereact/resources/themes/lara-light-indigo/theme.css";
 // @import "primeicons/primeicons.css";
 // @import "primereact/resources/primereact.min.css";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+  
+
+}
+
+
 @import "./_shared.scss";
 @import "./revealer";
 @import "./cloud";
