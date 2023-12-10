@@ -38,16 +38,16 @@ export const clouds: Cloud[] = [
   },
   {
     key: "6",
-    top: "11%",
+    top: "10%",
     left: "36%",
     width: "50%",
     imageName: "c1.png",
   },
   {
     key: "7",
-    top: "21%",
-    left: "29%",
-    width: "25%",
+    top: "9.75%",
+    left: "26.5%",
+    width: "35%",
     imageName: "c1-f.png",
   },
 
