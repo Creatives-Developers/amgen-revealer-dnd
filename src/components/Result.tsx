@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation';
+import YouniteLogo from "../assets/images/younite Logo.png"
+import AmgenLogo from "../assets/images/amgenlogo.jpg"
 export default function Result({resultVisability}:{resultVisability:boolean}) {
+    const [titleVisability,setTitleVisability]=useState(true)
+    useEffect(()=>{
+        const timer = setTimeout(()=>{
+            setTitleVisability(false)
+        },2000)
+        return ()=> {
+            clearTimeout(timer)
+        }
+    },[])
   return (
     <section className={`result-container ${resultVisability?'visible':''}`}>
-     {resultVisability&&  <TypeAnimation
+     {resultVisability && titleVisability&&  <TypeAnimation
       sequence={[
         'Against all clouds, we were able to YOUnite!',
         1000
@@ -11,7 +22,7 @@ export default function Result({resultVisability}:{resultVisability:boolean}) {
       speed={50}
       repeat={0}
     />}
-   <article className='content'>
+   {<article className={`content ${!titleVisability?'visible':''}`}>
    <p>
     As this year comes to an end, we would like to take the opportunity to appreciate what each one of YOU has brought to the organization.
     </p>
@@ -24,7 +35,11 @@ export default function Result({resultVisability}:{resultVisability:boolean}) {
     <p>
     Looking forward to starting our new milestone with plenty of energy!
     </p>
-   </article>
+   </article>}
+      <article className='footer'>
+      <img src={AmgenLogo}/>
+<img src={YouniteLogo} />
+      </article>
         </section>
   )
 }
