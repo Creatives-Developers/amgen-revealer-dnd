@@ -115,6 +115,7 @@ export default function Home() {
             key={cloud.key}
             cloud={cloud}
             width={getValue(cloud.width, parentSize.width) + "px"}
+            parentWidth={parentSize.width}
             dragableItemPosition={dragableItemPosition}
           />
         ))}

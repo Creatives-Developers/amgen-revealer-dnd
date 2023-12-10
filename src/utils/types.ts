@@ -1,6 +1,7 @@
 export type Cloud = {
   key: string;
   top: string;
+  mobileTop?: string;
   left: string;
   width: string;
   imageName: string;

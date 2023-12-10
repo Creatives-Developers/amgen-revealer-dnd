@@ -5,13 +5,15 @@ import { CloudType } from "../utils/constants";
 import { getEmptyImage } from "react-dnd-html5-backend";
 import CloudDragLayer from "./CloudDragLayer";
 export default function RevealerCloud({
-  cloud: { imageName, key, top, left },
+  cloud: { imageName, key, top,mobileTop, left },
   dragableItemPosition,
   width,
+  parentWidth
 }: {
   cloud: Cloud;
   dragableItemPosition: DragableItemPosition;
   width: string;
+  parentWidth:number
 }) {
   const [{ isDragging }, drag, preview] = useDrag({
     type: CloudType,
@@ -24,7 +26,7 @@ export default function RevealerCloud({
     preview(getEmptyImage(), { captureDraggingState: true });
   }, [preview]);
   return (
-    <section ref={drag} className={`cloud-item`} style={{ top, left, width }}>
+    <section ref={drag} className={`cloud-item`} style={{ top:parentWidth>1200?top:mobileTop??top, left, width }}>
       <img
         className={`cloud-img  ${isDragging ? "dragging" : ""}`}
         src={require(`../assets/images/${imageName}`)}

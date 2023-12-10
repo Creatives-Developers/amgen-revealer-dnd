@@ -6,8 +6,8 @@ header {
   left: 0;
   right: 0;
   background: white;
-@include centerChilds;
-flex-direction: column;
+  @include centerChilds;
+  flex-direction: column;
   p{
     font-size: 2rem;
     margin-block: 5px;
