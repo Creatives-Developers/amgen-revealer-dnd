@@ -74,7 +74,7 @@ export default function Home() {
       if(cloudsCount===0){
         timer= setTimeout(()=>{
           setResultVisability(true)
-        },2000)
+        },3000)
       }
       return ()=>{
         timer && clearTimeout(timer)
