@@ -4,12 +4,12 @@ export const Header=({isHideText,setHideText}:{isHideText:boolean,setHideText:Fu
     <>
     <div className={`overlay ${isHideText?'hidden':''}`}></div>
     <header className={`${isHideText?'hidden':''}`}>
-        
         <p>A foggy year can hold the most appreciable blessings as well!</p>
-        <p>Drag all the clouds right and left to reveal them   <button className='ok-button' onClick={()=>{
+        <p>Drag all the clouds right and left to reveal them  </p>
+        <p>and when you’re done, we have a message for you! Wait for it. </p>
+        <button className='ok-button' onClick={()=>{
             setHideText(true)
-        }}>ok</button></p>
-      
+        }}>ok</button>
     </header>
     </>)
 }

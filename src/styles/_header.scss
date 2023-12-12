@@ -1,6 +1,6 @@
 header {
   position: fixed;
-  padding-block: 20px;
+  padding-block: 20px ;
   z-index: 1000;
   bottom: 0px;
   left: 0;
@@ -8,6 +8,10 @@ header {
   background: white;
   @include centerChilds;
   flex-direction: column;
+
+  @include notXlg{
+    padding-bottom: 100px;
+  }
   p{
     font-size: 2rem;
     margin-block: 5px;
@@ -15,6 +19,10 @@ header {
     text-align: center;
     &:nth-of-type(2){
       font-weight: bold;
+    }
+
+    &:nth-of-type(3){
+      font-size: 1rem;
     }
 
     @include md{
@@ -28,14 +36,20 @@ header {
   }
 
   .ok-button{
-    background: transparent;
+    margin-top: 20px;
+    background: $primary-color;
+    padding: 10px 20px;
+    border-radius: 10px;
     outline: none;
     border: none;
-    font-size: inherit;
-    color: inherit;
-    font-weight: inherit;
-    text-decoration: underline;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $white-color;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 
 }
