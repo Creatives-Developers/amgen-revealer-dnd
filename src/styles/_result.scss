@@ -48,6 +48,10 @@ position: static;
     img{
          width: 50%;
         max-width: 150px;
+        &:nth-of-type(2){
+            position: relative;
+            top: 10px;
+        }
     }
 }
    
