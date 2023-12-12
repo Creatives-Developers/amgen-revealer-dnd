@@ -26,5 +26,23 @@ header {
     padding: 20px min(50px, 5%);
     position: relative;
   }
+
+  .ok-button{
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
 }
 
+
+.overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}

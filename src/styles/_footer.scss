@@ -5,7 +5,7 @@ footer {
   right: 0;
   z-index: 1000;
   max-width: 150px;
-  
+  padding-inline: 20px;
 
   @include centerChilds;
   .footer-image {

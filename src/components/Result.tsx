@@ -31,10 +31,10 @@ export default function Result({resultVisability}:{resultVisability:boolean}) {
     As this year comes to an end, we would like to take the opportunity to appreciate what each one of YOU has brought to the organization.
     </p>
     <p>
-    Amgen ELI team has accomplished so much together and together we celebrate! 
+    <strong> Amgen ELI </strong>team has accomplished so much together and together we celebrate! 
     </p>
     <p>
-    Along with all the hope and promises the new year holds, We are thrilled to invite you to Amgen year-end closing event “YOUnite” on the 18th and 19th of December at Sofitel El-Gezirah. 
+    Along with all the hope and promises the new year holds, We are thrilled to invite you to Amgen year-end closing event “<strong>YOUnite</strong>” on the 18th and 19th of December at Sofitel El-Gezirah, Cairo. 
     </p>
     <p>
     Looking forward to starting our new milestone with plenty of energy!

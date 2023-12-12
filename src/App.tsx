@@ -10,20 +10,13 @@ import { Footer } from "./components/Footer";
 import { useEffect, useState } from "react";
 function App() {
   const [isHideText,setHideText] = useState(false);
-  useEffect(()=>{
-    const timer=setTimeout(()=>{
-      setHideText(true);
-    },5000)
-    return ()=>{
-      clearTimeout(timer)
-    }
-  },[])
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={
           <>
-           <Header isHideText={isHideText}/>
+           <Header isHideText={isHideText} setHideText={setHideText}/>
             <Home />
             <Footer isHideText={isHideText}/>
           </>
