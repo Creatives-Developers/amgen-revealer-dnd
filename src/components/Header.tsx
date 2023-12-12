@@ -9,7 +9,7 @@ export const Header=({isHideText,setHideText}:{isHideText:boolean,setHideText:Fu
         <p>and when you’re done, we have a message for you! Wait for it. </p>
         <button className='ok-button' onClick={()=>{
             setHideText(true)
-        }}>ok</button>
+        }}>Ok</button>
     </header>
     </>)
 }
