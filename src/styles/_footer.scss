@@ -1,0 +1,24 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-width: 150px;
+  padding-inline: 20px;
+
+  @include centerChilds;
+  .footer-image {
+    width: 100%;
+    max-width: 250px;
+
+  }
+
+  @include xlg {
+    padding: 20px min(50px, 5%);
+    margin-block: 25px;
+    position: relative;
+    max-width: none;
+
+  }
+}

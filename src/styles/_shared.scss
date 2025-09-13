@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
+
+// Colors
+$primary-color: #2060a8;
+$primary-light-color: #006aa3;
+$light-bg: white;
+$black-color: #000;
+$input-border-color: #00000088;
+$white-color: #fff;
+
+@mixin centerChilds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  position: relative;
+  @include reset;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100dvh;
+}
+
+// Media
+// Small phones
+$screen-tn-max: 450px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 596px;
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Tablets and small desktops
+$screen-xlg-max: 1200px;
+
+// Phone devices
+@mixin tn {
+  @media (max-width: #{$screen-tn-max}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin xlg {
+  @media (max-width: #{$screen-xlg-max}) {
+    @content;
+  }
+}
+
+@mixin notXlg {
+  @media (width >= #{$screen-xlg-max}) {
+    @content;
+  }
+}
+
+@mixin fillHeight {
+  min-height: calc(100dvh - $nav-height);
+}
+
+// Scroll bar
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  transition: 0.5s;
+  background: $primary-light-color;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color;
+}
+
+:root {
+  font-size: 18px;
+  scroll-behavior: smooth;
+
+  @include lg {
+    font-size: 18px;
+  }
+  @include md {
+    font-size: 16px;
+  }
+  @include sm {
+    font-size: 14px;
+  }
+  // @include tn{
+  //     font-size: 10px;
+  // }
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.no-data {
+  @include centerChilds;
+  flex-direction: column;
+  img {
+    width: 100%;
+    max-width: 500px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin btnStyle {
+  background: white;
+  color: $primary-color;
+  border: 1px solid transparent;
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  &:hover {
+    border-color: white;
+    color: white;
+    background: transparent;
+  }
+}
+
+footer,header,.overlay{
+  transition: all 0.5s ease-in-out;
+  @include notXlg {
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+}
+
+.overlay,.ok-button{
+  @include xlg {
+      opacity: 0;
+      visibility: hidden;
+  
+  }
+}

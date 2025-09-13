@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c7dac0b6.css",
+    "main.js": "/static/js/main.e41b4aaa.js",
+    "static/js/787.c1112931.chunk.js": "/static/js/787.c1112931.chunk.js",
+    "static/media/base.jpg": "/static/media/base.299cda6562b6e56d06fa.jpg",
+    "static/media/c1-f.png": "/static/media/c1-f.4625c5caef14045e5031.png",
+    "static/media/Poppins-Light.ttf": "/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/c2.png": "/static/media/c2.645e3ce36a8a7dc111a1.png",
+    "static/media/c2-f.png": "/static/media/c2-f.ea691894c6919f0046ab.png",
+    "static/media/amgenlogo.jpg": "/static/media/amgenlogo.448e6c613c0f0fe82d8a.jpg",
+    "static/media/c1.png": "/static/media/c1.5a5cd72151fa751976c5.png",
+    "static/media/header.png": "/static/media/header.35e792f33a793c7beb06.png",
+    "static/media/younite Logo.png": "/static/media/younite Logo.e1da8e016c0f43b482d4.png",
+    "index.html": "/index.html",
+    "main.c7dac0b6.css.map": "/static/css/main.c7dac0b6.css.map",
+    "main.e41b4aaa.js.map": "/static/js/main.e41b4aaa.js.map",
+    "787.c1112931.chunk.js.map": "/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7dac0b6.css",
+    "static/js/main.e41b4aaa.js"
+  ]
+}

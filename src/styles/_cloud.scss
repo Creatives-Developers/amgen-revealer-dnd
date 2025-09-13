@@ -1,0 +1,21 @@
+.cloud-item {
+  position: absolute;
+  z-index: 2;
+
+  .cloud-img {
+    width: 100%;
+    &.dragging {
+      opacity: 0;
+    }
+  }
+
+  .drag-layer-container {
+    position: fixed;
+    z-index: 10;
+
+    img {
+      user-select: none;
+      opacity: 0.5;
+    }
+  }
+}
